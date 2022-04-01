@@ -1,0 +1,235 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  width: 60vw;
+  height: 90vh;
+}
+
+h1 {
+  color: white;
+  font-size: 44px;
+  width: 100%;
+  height: 10%;
+}
+#container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.caixa {
+  width: 48%;
+  height: 48%;
+  cursor: pointer;
+}
+
+.caixa-mensagem {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  margin: 150px;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+button {
+  margin-top: 35px;
+  width: 220px;
+  height: 50px;
+  font-size: 34px;
+  background-color: grey;
+  color: white;
+  cursor: pointer;
+  font-weight: 700;
+  --green: #1bfd9c;
+  font-size: 15px;
+  padding: 0.7em 2.7em;
+  letter-spacing: 0.06em;
+  position: relative;
+  font-family: inherit;
+  border-radius: 0.6em;
+  overflow: hidden;
+  transition: all 0.3s;
+  line-height: 1.4em;
+  border: 2px solid var(--green);
+  background: linear-gradient(
+    to right,
+    rgba(27, 253, 156, 0.1) 1%,
+    transparent 40%,
+    transparent 60%,
+    rgba(27, 253, 156, 0.1) 100%
+  );
+  color: var(--green);
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4),
+    0 0 9px 3px rgba(27, 253, 156, 0.1);
+}
+
+#botao-reiniciar {
+  width: 260px;
+  height: 80px;
+}
+p {
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 0 22px;
+}
+
+h3 {
+  font-size: 26px;
+  font-weight: bolder;
+  padding: 0 20px;
+}
+
+.verde {
+  background-color: green;
+  border-top-left-radius: 100%;
+}
+
+.vermelho {
+  background-color: red;
+  border-bottom-left-radius: 100%;
+}
+
+.amarela {
+  background-color: yellow;
+  border-top-right-radius: 100%;
+}
+
+.azul {
+  background-color: blue;
+  border-bottom-right-radius: 100%;
+}
+
+#verde {
+  -webkit-box-shadow: 5px 5px 35px 10px green;
+  box-shadow: 5px 5px 35px 10px green;
+  transition: 0.4ms;
+}
+
+#amarela {
+  -webkit-box-shadow: 5px 5px 35px 10px yellow;
+  box-shadow: 5px 5px 35px 10px yellow;
+  transition: 0.4ms;
+}
+
+#vermelho {
+  -webkit-box-shadow: 5px 5px 35px 10px red;
+  box-shadow: 5px 5px 35px 10px red;
+  transition: 0.4ms;
+}
+
+#azul {
+  -webkit-box-shadow: 5px 5px 35px 10px blue;
+  box-shadow: 5px 5px 35px 10px blue;
+  transition: 0.4ms;
+}
+
+/* //----------------------- */
+
+button:hover {
+  color: #82ffc9;
+  box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6),
+    0 0 9px 3px rgba(27, 253, 156, 0.2);
+}
+
+.modal {
+  background-color: rgba(153, 250, 213, 0);
+  margin-top: 20px;
+  width: 350px;
+  height: 250px;
+  box-shadow: 5px 5px 35px 10px rgba(27, 253, 156, 0.6);
+  color: #1bfd9c;
+  font-size: 36px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 50%;
+  left: 20px;
+  padding: 15px;
+  border-radius: 20%;
+}
+
+#_errado {
+  background-color: rgba(153, 250, 213, 0);
+  width: 350px;
+  height: 250px;
+  box-shadow: 5px 5px 35px 10px #fd1b41;
+  color: #fd1b41;
+  font-size: 36px;
+  border: 2px solid #fd1b41;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  bottom: 50%;
+  left: 20px;
+  animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.botao-reiniciar {
+  margin-top: 40px;
+  background-color: rgba(153, 250, 213, 0);
+  width: 260px;
+  height: 80px;
+  border: 2px solid #fd1b41;
+  box-shadow: 5px 5px 35px 10px #fd1b41;
+  color: #fd1b41;
+  font-size: 20px;
+}
+
+.botao-reiniciar:hover {
+  background-color: rgba(153, 250, 213, 0);
+  box-shadow: 5px 5px 35px 10px #fd1b41;
+  color: #fd1b41;
+  border: 2px solid #fd1b41;
+}
+
+@keyframes shake {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
